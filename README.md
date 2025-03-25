@@ -1,27 +1,72 @@
-# SsConnect
+## 🚀 SS-Connect: Instant Messaging Application  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+SS-Connect is an instant messaging application designed to connect people with different interests and facilitate collaboration on projects.  
 
-## Development server
+The application was developed using **Angular 16 and Firebase** and includes the following features:  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Home page** to explore profiles and connect with other users.  
+- **Profile section** where users can view their information.  
+- **Registration and login system** for secure access.  
+- **Real-time messaging** that allows conversations with multiple people.  
+- **Interactive feedback**, including notifications for account creation, incorrect passwords, and non-existent users, among others.  
 
-## Code scaffolding
+## 📷 Screenshots  
+Displaying available user profiles.
+![available user profiles](/src/assets/images/main-users.png)
+User information profile.
+![user information profile](/src/assets/images/page-profiles.png)
+Real time conversations between users.
+![messagin page](/src/assets/images/messaging.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🖥 Installation and Setup  
 
-## Build
+#### Prerequisites  
+Before starting, make sure you have:  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- A **code editor** installed.  
+- A **Firebase account** with **Authentication** and **Firestore Database** enabled.  
 
-## Running unit tests
+#### Installation  
+Clone this repository and open the project in your code editor.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install the required dependencies:  
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### Configuration  
+Add the **API KEY** provided by Firebase to the environment variables:  
 
-## Further help
+```tsx
+export const environment = {
+  production: false,
+  firebase: { // Add your API KEY information here
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    measurementId: ""
+  },
+};
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Running the Application  
+To start the server, run:  
+
+```bash
+ng serve
+```
+
+To access the application, open:  
+
+```
+http://localhost:4200/login
+```
+
+## 🖋 Reflection  
+
+The main objective of this application was to **connect people with diverse skills to collaborate on interdisciplinary projects** while also exploring and adapting to technologies such as **Angular and Firebase**.  
+
+The development process posed several challenges. Navigation and authentication required implementing access restrictions to prevent users without accounts from entering restricted sections. Real-time messaging was another major challenge, which was solved by creating a Firestore collection to store messages while tracking user interactions within each chat. Thanks to Firebase integration, the application efficiently handled authentication and data storage, enabling **rapid development without the need to build a database from scratch**.
